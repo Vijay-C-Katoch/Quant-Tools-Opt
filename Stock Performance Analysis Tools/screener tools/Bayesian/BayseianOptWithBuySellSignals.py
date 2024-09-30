@@ -111,7 +111,7 @@ def plot_trendline_and_std_ranges(hist, mean_aroc, std_deviation, ticker):
     plt.ylabel('Price')
     plt.legend()
     plt.grid(True)
-    plt.savefig(f"C:\\Users\\cinco\\Desktop\\DATA FOR SCRIPTS\\Results\\screener 9.19.24\\{ticker}_trendline_std_chart.png")
+    plt.savefig(f"..\\..\\test-data\\Results\\screener 9.19.24\\{ticker}_trendline_std_chart.png")
     print(f"Trendline and standard deviation chart '{ticker}_trendline_std_chart.png' has been created.")
     plt.show()
 
@@ -133,7 +133,7 @@ def plot_aroc_bell_curve(aroc_list):
     plt.legend()
     plt.grid(True)
     
-    plt.savefig(r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\screener 9.19.24\aroc_bell_curve.png")
+    plt.savefig(r"..\..\test-data\Results\screener 9.19.24\aroc_bell_curve.png")
     print("AROC bell curve chart 'aroc_bell_curve.png' has been created.")
     plt.show()
 
@@ -247,7 +247,7 @@ def optimize_strategy(ticker, hist):
     return best_params, best_return
 
 def main():
-    tickers = load_tickers(r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\tickers.json")
+    tickers = load_tickers(r"..\..\test-data\tickers\tickers.json")
     size_filter = input("Enter market cap size to filter by (small, medium, large): ").lower()
     num_stocks = int(input("Enter the number of stocks to analyze: "))
 
@@ -299,12 +299,12 @@ def main():
         })
 
     # Save to CSV
-    csv_filename = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\screener 9.19.24\stock_analysis_results_9.19.24.csv"
+    csv_filename = r"..\..\test-data\Results\screener 9.19.24\stock_analysis_results_9.19.24.csv"
     save_to_csv(csv_data, csv_filename)
     print(f"Data saved to {csv_filename}")
 
     # Save optimization results to CSV
-    optimization_csv = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\screener 9.19.24\optimization_results_9.19.24.csv"
+    optimization_csv = r"..\..\test-data\Results\screener 9.19.24\optimization_results_9.19.24.csv"
     with open(optimization_csv, 'w', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=['Ticker', 'Lower Sigma', 'Upper Sigma', 'Expected Return (%)'])
         writer.writeheader()

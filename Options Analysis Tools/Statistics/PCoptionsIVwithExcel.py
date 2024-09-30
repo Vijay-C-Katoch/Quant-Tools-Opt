@@ -102,7 +102,7 @@ def plot_stock_price(ticker):
     plt.show()
 
 def save_to_excel(data_calls, data_puts, ticker):
-    with pd.ExcelWriter(rf"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.28.24\{ticker}_options_data.xlsx") as writer:
+    with pd.ExcelWriter(rf"..\..\test-data\Results\9.28.24\{ticker}_options_data.xlsx") as writer:
         df_calls = pd.DataFrame(data_calls)
         df_puts = pd.DataFrame(data_puts)
         df_calls.to_excel(writer, sheet_name="Calls", index=False)
@@ -164,10 +164,10 @@ def main():
     save_to_excel(data_calls, data_puts, ticker)
 
     print("\nPlotting and saving Calls Implied Volatility Surface...")
-    plot_implied_volatility_surface(data_calls, f'{ticker} Calls Implied Volatility Surface', rf"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.28.24\{ticker}_calls_iv_surface.png")
+    plot_implied_volatility_surface(data_calls, f'{ticker} Calls Implied Volatility Surface', rf"..\..\test-data\Results\9.28.24\{ticker}_calls_iv_surface.png")
 
     print("\nPlotting and saving Puts Implied Volatility Surface...")
-    plot_implied_volatility_surface(data_puts, f'{ticker} Puts Implied Volatility Surface', rf"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.28.24\{ticker}_puts_iv_surface.png")
+    plot_implied_volatility_surface(data_puts, f'{ticker} Puts Implied Volatility Surface', rf"..\..\test-data\Results\9.28.24\{ticker}_puts_iv_surface.png")
 
     print("\nPlotting stock price for the past 6 months...")
     plot_stock_price(ticker)

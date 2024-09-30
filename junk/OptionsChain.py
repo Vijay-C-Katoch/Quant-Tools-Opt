@@ -30,7 +30,7 @@ def save_option_chain(option_chain, ticker, expiration_date):
     combined = combined.reset_index(drop=True)
     
     # Define the path
-    path = r"C:\Users\cinco\Desktop\quant practicie\Research\Research Tools\Options\Options Chain"
+    path = r"..\..\test-data\quant-practice\Research\Research Tools\Options"
     if not os.path.exists(path):
         os.makedirs(path)
     

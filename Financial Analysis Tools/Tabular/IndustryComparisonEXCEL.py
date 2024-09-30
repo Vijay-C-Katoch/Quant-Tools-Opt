@@ -91,7 +91,7 @@ def create_excel_file(time_series_data, tickers_data, file_path):
                 writer.sheets[sheet_name].column_dimensions[get_column_letter(col_idx)].width = column_length + 2
 
 def main():
-    file_path = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\tickers.json"
+    file_path = r"..\..\test-data\tickers\tickers.json"
     tickers_data = load_tickers(file_path)
 
     selected_ticker = input("Enter the ticker symbol of the company: ").upper()
@@ -105,7 +105,7 @@ def main():
     financial_data = fetch_time_series_data(industry_tickers)
 
     # Create Excel file
-    excel_file_path = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\IndustryComparison\industry_comparison.xlsx"
+    excel_file_path = r"..\..\test-data\Results\IndustryComparison\industry_comparison.xlsx"
     create_excel_file(financial_data, tickers_data, excel_file_path)
     print(f"\nExcel file created: {excel_file_path}")
 

@@ -79,8 +79,8 @@ def main():
     logging.info(f"Target RAM usage: {target_ram / 1e9:.1f} GB")
     logging.info(f"Target GPU VRAM usage: {target_gpu_vram / 1e9:.1f} GB")
     
-    input_csv = r"C:\Users\cinco\Desktop\quant practicie\spy_Monte_Carlo_Simulation_2322_days_1000000_sims.csv"
-    output_csv = r'C:\Users\cinco\Desktop\quant practicie\filtered_paths.csv'
+    input_csv = r"..\..\test-data\quant-practice\spy_Monte_Carlo_Simulation_2322_days_1000000_sims.csv"
+    output_csv = r'..\..\test-data\quant-practice\filtered_paths.csv'
     
     try:
         daily_std, weekly_std, monthly_std = process_data(input_csv, output_csv)

@@ -144,7 +144,7 @@ def plot_aroc_bell_curve(aroc_list, log_aroc_list):
     ax2.grid(True)
     
     plt.tight_layout()
-    plt.savefig(r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.22.24\LargeCaparoc_bell_curves.png")
+    plt.savefig(r"..\..\test-data\Results\9.22.24\LargeCaparoc_bell_curves.png")
     print("AROC bell curve charts 'aroc_bell_curves.png' have been created.")
     plt.show()
 
@@ -178,7 +178,7 @@ def plot_trendline_and_std_ranges(hist, mean_aroc, std_deviation, mean_price, st
     plt.grid(True)
 
     # Save and display the plot
-    plt.savefig(r'C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.22.24\{ticker}_Price_STD.png')
+    plt.savefig(r'..\..\test-data\Results\9.22.24\{ticker}_Price_STD.png')
     print(f"Trendline and standard deviation chart '{ticker}_Price_STD.png' has been created.")
     plt.show()
 
@@ -208,7 +208,7 @@ def plot_performance_with_aroc_std(hist, mean_aroc, std_deviation, ticker):
     plt.grid(True)
     
     # Save and show the plot
-    plt.savefig(r'C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.22.24\{ticker}_performance_aroc_std_chart.png')
+    plt.savefig(r'..\..\test-data\Results\9.22.24\{ticker}_performance_aroc_std_chart.png')
     print(f"Performance chart with AROC and stds for {ticker} created.")
     plt.show()
     
@@ -300,7 +300,7 @@ def save_to_excel(data, filename):
 
 # Now modify the main loop to include this function call
 def main():
-    tickers = load_tickers(r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\tickers.json")
+    tickers = load_tickers(r"..\..\test-data\tickers\tickers.json")
     size_filter = input("Enter market cap size to filter by (small, medium, large): ").lower()
     num_stocks = int(input("Enter the number of stocks to analyze: "))
 
@@ -359,7 +359,7 @@ def main():
         })
 
     # Save to Excel
-    excel_filename = rf"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\9.22.24\{size_filter}_Cap_Analysis.xlsx"
+    excel_filename = rf"..\..\test-data\Results\9.22.24\{size_filter}_Cap_Analysis.xlsx"
     save_to_excel(excel_data, excel_filename)
     
     # Plot AROC bell curves

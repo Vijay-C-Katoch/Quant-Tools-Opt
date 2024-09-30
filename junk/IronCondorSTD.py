@@ -195,7 +195,7 @@ def find_best_iron_condor_strikes(option_chain, std_levels, ticker, expiration_d
     all_options = all_options.sort_values('strike')
     
     # Save to CSV
-    csv_path = f"C:\\Users\\cinco\\Desktop\\quant practicie\\Research\\Research Tools\\Options\\Options Chain\\{ticker}_{expiration_date}_options_chain_highlighted.csv"
+    csv_path = f"..\\..\\test-data\\quant-practice\\Research\\Research Tools\\Options\\Options Chain\\{ticker}_{expiration_date}_options_chain_highlighted.csv"
     all_options.to_csv(csv_path, index=False)
     print(f"Highlighted options chain saved to: {csv_path}")
 

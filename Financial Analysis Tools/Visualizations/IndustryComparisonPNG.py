@@ -111,7 +111,7 @@ def plot_selected_metrics(time_series_data, selected_metrics, folder_path):
 
 def main():
     # Load the ticker data
-    file_path = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\tickers.json"
+    file_path = r"..\..\test-data\tickers\tickers.json"
     tickers_data = load_tickers(file_path)
 
     # Get user input for the ticker
@@ -135,7 +135,7 @@ def main():
     selected_metrics = user_select_metrics(all_metrics)
 
     # Plot and save charts for the selected metrics
-    folder_path = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\Results\IndustryComparison"
+    folder_path = r"..\..\test-data\Results\IndustryComparison"
     plot_selected_metrics(financial_data, selected_metrics, folder_path)
 
 if __name__ == "__main__":

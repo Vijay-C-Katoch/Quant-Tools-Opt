@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 def get_risk_free_rate(expiration_date):
     # Read the CSV file
-    treasury_data = pd.read_csv(r'C:\Users\cinco\Desktop\quant practicie\Research\Research Tools\Options\Macro\daily-treasury-rates.csv', index_col='Date', parse_dates=True)
+    treasury_data = pd.read_csv(r'..\..\test-data\quant-practice\Research\Research Tools\Options\Macro\daily-treasury-rates.csv', index_col='Date', parse_dates=True)
     treasury_data = treasury_data.sort_index(ascending=False)  # Sort by date descending
     
     # Get the most recent rate before or on the expiration date

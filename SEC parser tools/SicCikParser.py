@@ -5,8 +5,8 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing
 
 # Paths for input folder and output JSON file
-input_folder = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\submissions9.21.24"
-output_file = r"C:\Users\cinco\Desktop\DATA FOR SCRIPTS\FILES FOR SCRIPTS\TICKERs\tickers.json"
+input_folder = r"..\..\test-data\tickers\submission"
+output_file = r"..\..\test-data\tickers\json-output\tickers.json"
 
 # Initialize a dictionary to hold the parsed data
 output_data = {}
